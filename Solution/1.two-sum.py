@@ -28,9 +28,18 @@
 # @lc code=start
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        k = 0
-        for i in nums:
-            k += 1
-            if target - i in nums[k:]:
-                return(k - 1, nums[k:].index(target - i) + k)
+        
+        hash_table = {}
+        for i, num in enumerate(nums):
+            if target - num in hash_table:
+                return([hash_table[target - num], i])
+                break    # 看到有人在這加了break, 理論上不會執行到, 但時間卻會比較短
+            hash_table[num] = i
+        return([])
+        
+        # k = 0
+        # for i in nums:
+        #     k += 1
+        #     if target - i in nums[k:]:
+        #         return(k - 1, nums[k:].index(target - i) + k)
 # @lc code=end
