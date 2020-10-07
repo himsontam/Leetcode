@@ -29,14 +29,16 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
+        # Solution 1
         hash_table = {}
         for i, num in enumerate(nums):
             if target - num in hash_table:
                 return([hash_table[target - num], i])
-                break    # 看到有人在這加了break, 理論上不會執行到, 但時間卻會比較短
+                break 
             hash_table[num] = i
         return([])
         
+        # Solution 2
         # k = 0
         # for i in nums:
         #     k += 1
