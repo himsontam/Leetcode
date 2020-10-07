@@ -45,3 +45,7 @@ class Solution:
         #     if target - i in nums[k:]:
         #         return(k - 1, nums[k:].index(target - i) + k)
 # @lc code=end
+
+# Online Solution
+# https://medium.com/@havbgbg68/leetcode-1-two-sum-python-8d77c223abd3
+# https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_relevant&query=python
